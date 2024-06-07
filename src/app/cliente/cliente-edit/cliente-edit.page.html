@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cliente Asegurado</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="volver()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button fill="solid" (click)="accion(cliente.id)">
+        Guardar
+        <ion-icon name="save" slot="end"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="stacked" style="font-size: 20px;">Nombre</ion-label>
+    <ion-input [(ngModel)]="cliente.nombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked" style="font-size: 20px;">Apellido</ion-label>
+    <ion-input [(ngModel)]="cliente.apellido"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked" style="font-size: 20px;">Fecha de Nacimiento</ion-label>
+    <ion-datetime presentation="date" [(ngModel)]="cliente.nacimiento" name="fecha"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked" style="font-size: 20px;">Bien Asegurado</ion-label>
+    <ion-input [(ngModel)]="cliente.bien_asegurado"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked" style="font-size: 20px;">Monto Asegurado</ion-label>
+    <ion-input [(ngModel)]="cliente.monto_asegurado"></ion-input>
+  </ion-item>
+</ion-content>
